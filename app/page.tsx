@@ -1,3 +1,5 @@
+import DownloadMenu from "./components/DownloadMenu";
+
 const variableTypes = [
   {
     title: "Строка",
@@ -57,33 +59,10 @@ const perks = [
   }
 ];
 
-function DownloadMenu({ buttonClassName }: { buttonClassName: string }) {
-  return (
-    <details className="relative">
-      <summary
-        className={`list-none cursor-pointer rounded-full ${buttonClassName}`}
-      >
-        Скачать
-      </summary>
-      <div className="absolute right-0 z-10 mt-3 w-52 rounded-2xl border border-white/10 bg-slate-950/95 p-2 shadow-soft">
-        <a
-          className="block rounded-xl px-3 py-2 text-sm text-white transition hover:bg-white/10"
-          href="https://github.com/zidiks/doxiq/releases/download/v0.1.0/DoxiQ_0.1.0_x64-setup.exe"
-        >
-          Windows
-        </a>
-        <div className="rounded-xl px-3 py-2 text-sm text-slate-400">
-          MacOS (скоро)
-        </div>
-      </div>
-    </details>
-  );
-}
-
 export default function Home() {
   return (
     <main className="bg-slate-950 text-white">
-      <div className="relative overflow-hidden">
+      <div className="relative">
         <div className="absolute inset-0">
           <div className="absolute -top-32 right-0 h-72 w-72 rounded-full bg-brand-500/30 blur-3xl" />
           <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-sky-500/20 blur-3xl" />
@@ -116,7 +95,7 @@ export default function Home() {
           <div className="max-w-xl space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs text-brand-100">
               <span className="h-2 w-2 rounded-full bg-brand-400" />
-              Desktop-приложение • Windows • Безопасно внутри компании
+              Премиальный софт • Windows • Безопасно внутри компании
             </div>
             <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
               Документы без ручной рутины и ошибок. Word и Excel — по правилам.
@@ -405,24 +384,16 @@ export default function Home() {
             операционных команд.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <button className="rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:bg-brand-400">
-              Запланировать демо (Windows)
-            </button>
-            <button className="rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition hover:border-white/70">
-              Скачать презентацию
-            </button>
+            <DownloadMenu buttonClassName="bg-brand-500 px-8 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:bg-brand-400" />
           </div>
         </div>
       </section>
 
       <footer className="border-t border-white/10 py-8">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 px-6 text-sm text-slate-400 md:flex-row md:items-center">
-          <p>
-            Desktop-приложение для Windows • Безопасно • Без передачи данных в облако
-          </p>
+          <p>Премиальный софт для Windows • Безопасно • Без передачи данных в облако</p>
           <div className="flex gap-6">
-            <span>hello@doxiq.app</span>
-            <span>+7 (900) 123-45-67</span>
+            <span>zidiks228@gmail.com</span>
           </div>
         </div>
       </footer>
