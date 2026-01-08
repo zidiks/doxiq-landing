@@ -1,23 +1,24 @@
 const variableTypes = [
   {
     title: "Строка",
-    description: "Короткие текстовые значения для реквизитов и заголовков."
+    description: "Короткие значения для реквизитов и заголовков."
   },
   {
     title: "Textarea",
-    description: "Многострочные блоки, пояснительные записки и описания."
+    description: "Пояснения, условия, описания."
   },
   {
     title: "Форматированный текст",
-    description: "Поддержка жирного, списков и аккуратной верстки."
+    description: "Жирный текст, списки, аккуратная верстка прямо в документе."
   },
   {
     title: "Дата",
-    description: "Автоматические шаблоны дат с контролем формата."
+    description: "Контроль формата и автоматические шаблоны дат."
   },
   {
     title: "Число",
-    description: "Числовые поля с конвертацией сумм прописью."
+    description:
+      "Числовые поля с автоматической расшифровкой суммы прописью."
   }
 ];
 
@@ -25,17 +26,16 @@ const steps = [
   {
     title: "Загрузите шаблон",
     description:
-      "Сохраните Word или Excel документ в библиотеке. Отметьте переменные прямо в файле."
+      "Добавьте Word или Excel и отметьте переменные прямо в файле."
   },
   {
-    title: "Опишите поля",
+    title: "Опишите правила",
     description:
-      "Назначьте типы, форматы и правила валидации, чтобы форма заполнялась без ошибок."
+      "Назначьте типы полей, форматы и валидацию — чтобы исключить ошибки."
   },
   {
     title: "Сгенерируйте документ",
-    description:
-      "Заполните форму и получите готовый документ за секунды — без ручного копирования."
+    description: "Заполните форму и получите корректный файл за секунды."
   }
 ];
 
@@ -43,17 +43,17 @@ const perks = [
   {
     title: "Единая база шаблонов",
     description:
-      "Все версии Word/Excel хранятся централизованно, есть быстрый поиск и теги."
+      "Все версии Word и Excel в одном месте: поиск, теги, история изменений."
   },
   {
     title: "Умные переменные",
     description:
-      "Поддержка формул, связей между полями и автозаполнения реквизитов."
+      "Типы полей, формулы, зависимости и автозаполнение реквизитов."
   },
   {
     title: "Готово для команды",
     description:
-      "Роли, история изменений и контроль доступа — чтобы каждый работал в своем контуре."
+      "Роли, контроль доступа и единый стандарт документов для всей компании."
   }
 ];
 
@@ -95,28 +95,32 @@ export default function Home() {
           <div className="max-w-xl space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs text-brand-100">
               <span className="h-2 w-2 rounded-full bg-brand-400" />
-              Новая платформа для генерации документов
+              Desktop-приложение • Windows • Безопасно внутри компании
             </div>
             <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
-              Собирайте Word/Excel шаблоны в один сервис и выпускайте документы за минуты.
+              Документы без ручной рутины и ошибок. Word и Excel — по правилам.
             </h1>
             <p className="text-base text-slate-200 md:text-lg">
-              DoxiQ — приложение на JS/TS для хранения шаблонов, описания переменных и
-              автоматического заполнения форм. Меньше рутины — больше контроля.
+              Соберите шаблоны Word и Excel в одном приложении, задайте правила заполнения и
+              выпускайте договоры, счета и акты за минуты — без копирования и правок.
+            </p>
+            <p className="text-sm text-slate-300">
+              DoxiQ — автоматическое создание документов из шаблонов Word и Excel для команд
+              и бизнеса.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:bg-brand-400">
-                Получить доступ
+                Запросить демо
               </button>
               <button className="rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/70">
-                Смотреть интерфейс
+                Посмотреть интерфейс
               </button>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               {[
-                { label: "Шаблонов", value: "250+" },
-                { label: "Документов в день", value: "12 000" },
-                { label: "Сокращение времени", value: "-72%" }
+                { label: "До –70% времени на документы", value: "–70%" },
+                { label: "–90% ошибок за счет валидации", value: "–90%" },
+                { label: "Единый стандарт для отделов", value: "100%" }
               ].map((item) => (
                 <div
                   key={item.label}
@@ -135,7 +139,9 @@ export default function Home() {
               </div>
               <div className="space-y-6">
                 <div className="rounded-2xl bg-slate-900/70 p-4">
-                  <p className="text-xs text-slate-400">Шаблоны</p>
+                  <p className="text-xs text-slate-400">
+                    Контроль шаблонов без хаоса копий
+                  </p>
                   <div className="mt-4 grid gap-4 md:grid-cols-2">
                     {[
                       {
@@ -159,15 +165,17 @@ export default function Home() {
                           {card.type}
                         </div>
                         <h3 className="mt-3 text-lg font-semibold text-white">{card.name}</h3>
-                        <p className="text-xs text-slate-400">12 полей · обновлено сегодня</p>
+                        <p className="text-xs text-slate-400">
+                          12 полей · единый стандарт
+                        </p>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-xs text-slate-400">Форма заполнения</p>
+                  <p className="text-xs text-slate-400">Форма с валидацией данных</p>
                   <div className="mt-4 space-y-3">
-                    {["Название компании", "ИНН", "Сумма", "Дата"].map((field) => (
+                    {["Название компании", "ИНН", "Сумма прописью", "Дата"].map((field) => (
                       <div
                         key={field}
                         className="flex items-center justify-between rounded-xl border border-white/10 bg-slate-950/60 px-3 py-2"
@@ -189,11 +197,11 @@ export default function Home() {
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-[0.2em] text-brand-200">Возможности</p>
             <h2 className="text-3xl font-semibold md:text-4xl">
-              Полный цикл работы с шаблонами документов.
+              Полный контроль над документами — от шаблона до финального файла
             </h2>
             <p className="text-slate-300">
-              Встроенный редактор полей помогает описывать переменные прямо в файле, а
-              визуальная форма гарантирует корректное заполнение для любого отдела.
+              Описывайте переменные прямо в Word/Excel, а DoxiQ сам соберет корректную
+              форму и проверит данные до генерации.
             </p>
             <div className="grid gap-4 md:grid-cols-2">
               {perks.map((perk) => (
@@ -210,14 +218,14 @@ export default function Home() {
           <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-brand-500/10 via-slate-900/60 to-slate-900/20 p-8">
             <h3 className="text-xl font-semibold">Контроль качества данных</h3>
             <p className="mt-3 text-sm text-slate-300">
-              Настраивайте маски, типы и обязательность полей. Мы предотвратим ошибки еще до
-              генерации документа.
+              Мы предотвращаем ошибки до генерации документа.
             </p>
             <div className="mt-6 space-y-4 text-sm text-slate-200">
               {[
-                "Проверки реквизитов и ИНН",
-                "Автоподстановка данных из CRM",
-                "История запусков и экспорт в PDF"
+                "Проверки ИНН и реквизитов",
+                "Обязательные поля и маски ввода",
+                "Автоподстановка данных из CRM (опционально)",
+                "История генераций и экспорт в PDF"
               ].map((item) => (
                 <div
                   key={item}
@@ -237,7 +245,10 @@ export default function Home() {
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-brand-200">Типы полей</p>
-              <h2 className="text-3xl font-semibold">Гибкая форма под каждую задачу</h2>
+              <h2 className="text-3xl font-semibold">Гибкая форма под любой документ</h2>
+              <p className="mt-3 text-sm text-slate-300">
+                От простых реквизитов до сложных договоров и счетов.
+              </p>
             </div>
             <button className="rounded-full border border-white/20 px-5 py-2 text-sm text-white">
               Каталог полей
@@ -261,10 +272,11 @@ export default function Home() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 via-slate-950/60 to-slate-950/20 p-8">
             <p className="text-sm uppercase tracking-[0.2em] text-brand-200">Процесс</p>
-            <h2 className="mt-4 text-3xl font-semibold">Всего 3 шага до готового файла</h2>
+            <h2 className="mt-4 text-3xl font-semibold">
+              Всего 3 шага до готового документа
+            </h2>
             <p className="mt-3 text-slate-300">
-              Отмечайте переменные в шаблоне, задавайте правила и генерируйте документы —
-              DoxiQ автоматически собирает данные и заполняет нужные места.
+              Без копирования, без ручных правок, без ошибок.
             </p>
             <div className="mt-6 space-y-4">
               {steps.map((step, index) => (
@@ -284,23 +296,23 @@ export default function Home() {
             </div>
           </div>
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-            <h3 className="text-xl font-semibold text-white">Что получает команда</h3>
+            <h3 className="text-xl font-semibold text-white">Что получает бизнес</h3>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               {[
                 {
                   title: "Экономия времени",
-                  value: "до 3 часов",
+                  value: "до нескольких часов",
                   description: "на каждом пакете документов"
                 },
                 {
                   title: "Снижение ошибок",
-                  value: "-90%",
+                  value: "до –90%",
                   description: "за счет валидации"
                 },
                 {
                   title: "Единый стандарт",
                   value: "100%",
-                  description: "соответствие шаблонам"
+                  description: "соответствие утвержденным шаблонам"
                 },
                 {
                   title: "Быстрый старт",
@@ -322,9 +334,42 @@ export default function Home() {
             </div>
             <div className="mt-8 rounded-2xl border border-white/10 bg-brand-500/10 p-5">
               <p className="text-sm text-brand-100">
-                Числовые поля поддерживают автоматическую расшифровку суммы прописью — полезно
-                для счетов и договоров.
+                Числовые поля автоматически преобразуют суммы прописью — без ручной проверки
+                и человеческого фактора.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 pb-12">
+        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900/80 via-slate-950/80 to-brand-500/10 p-10">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs text-brand-100">
+                <span className="h-2 w-2 rounded-full bg-brand-400" />
+                AI features — coming soon
+              </div>
+              <h2 className="mt-4 text-3xl font-semibold">AI-интеграция — скоро</h2>
+              <p className="mt-3 text-slate-300">
+                Мы работаем над AI-модулем, который ускорит подготовку шаблонов в разы.
+              </p>
+            </div>
+            <div className="grid gap-3 text-sm text-slate-200">
+              {[
+                "Автоматическое распознавание переменных в шаблонах",
+                "Предложение структуры формы",
+                "Проверка документов на логические ошибки",
+                "Ускоренная подготовка шаблонов"
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 rounded-xl border border-white/10 bg-slate-950/60 px-4 py-3"
+                >
+                  <span className="h-2 w-2 rounded-full bg-brand-400" />
+                  {item}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -334,14 +379,15 @@ export default function Home() {
         <div className="rounded-3xl border border-white/10 bg-white/5 p-10 text-center shadow-soft">
           <p className="text-sm uppercase tracking-[0.2em] text-brand-200">Готовы начать?</p>
           <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
-            Запустите DoxiQ и автоматизируйте документы уже в этом месяце.
+            Автоматизируйте документы уже в этом месяце
           </h2>
           <p className="mt-4 text-slate-300">
-            Мы поможем перенести ваши шаблоны и настроить формы для всех отделов.
+            Поможем перенести ваши шаблоны и настроить формы для бухгалтерии, юристов и
+            операционных команд.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <button className="rounded-full bg-brand-500 px-8 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:bg-brand-400">
-              Запланировать демо
+              Запланировать демо (Windows)
             </button>
             <button className="rounded-full border border-white/30 px-8 py-3 text-sm font-semibold text-white transition hover:border-white/70">
               Скачать презентацию
@@ -352,7 +398,9 @@ export default function Home() {
 
       <footer className="border-t border-white/10 py-8">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 px-6 text-sm text-slate-400 md:flex-row md:items-center">
-          <p>© 2024 DoxiQ. Автоматизация документов нового поколения.</p>
+          <p>
+            Desktop-приложение для Windows • Безопасно • Без передачи данных в облако
+          </p>
           <div className="flex gap-6">
             <span>hello@doxiq.app</span>
             <span>+7 (900) 123-45-67</span>
