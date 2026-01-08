@@ -57,6 +57,29 @@ const perks = [
   }
 ];
 
+function DownloadMenu({ buttonClassName }: { buttonClassName: string }) {
+  return (
+    <details className="relative">
+      <summary
+        className={`list-none cursor-pointer rounded-full ${buttonClassName}`}
+      >
+        Скачать
+      </summary>
+      <div className="absolute right-0 z-10 mt-3 w-52 rounded-2xl border border-white/10 bg-slate-950/95 p-2 shadow-soft">
+        <a
+          className="block rounded-xl px-3 py-2 text-sm text-white transition hover:bg-white/10"
+          href="https://github.com/zidiks/doxiq/releases/download/v0.1.0/DoxiQ_0.1.0_x64-setup.exe"
+        >
+          Windows
+        </a>
+        <div className="rounded-xl px-3 py-2 text-sm text-slate-400">
+          MacOS (скоро)
+        </div>
+      </div>
+    </details>
+  );
+}
+
 export default function Home() {
   return (
     <main className="bg-slate-950 text-white">
@@ -86,9 +109,7 @@ export default function Home() {
               Процесс
             </a>
           </nav>
-          <button className="rounded-full border border-white/20 px-4 py-2 text-sm text-white transition hover:border-white/60">
-            Запросить демо
-          </button>
+          <DownloadMenu buttonClassName="border border-white/20 px-4 py-2 text-sm text-white transition hover:border-white/60" />
         </header>
 
         <section className="relative mx-auto flex w-full max-w-6xl flex-col gap-12 px-6 pb-20 pt-8 lg:flex-row lg:items-center">
@@ -109,9 +130,7 @@ export default function Home() {
               и бизнеса.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:bg-brand-400">
-                Запросить демо
-              </button>
+              <DownloadMenu buttonClassName="bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:bg-brand-400" />
               <button className="rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/70">
                 Посмотреть интерфейс
               </button>
