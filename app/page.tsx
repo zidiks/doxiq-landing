@@ -33,7 +33,7 @@ const steps = [
   {
     title: "Опишите правила",
     description:
-      "Назначьте типы полей, форматы и валидацию — чтобы исключить ошибки."
+      "Назначьте типы полей, форматы и валидацию - чтобы исключить ошибки."
   },
   {
     title: "Сгенерируйте документ",
@@ -69,9 +69,11 @@ export default function Home() {
         </div>
         <header className="relative mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500/20">
-              <span className="text-xl font-semibold text-brand-200">DQ</span>
-            </div>
+            <svg className="size-10 flex-none" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="12" fill="#06292C"/>
+              <path d="M27.2913 27.0038C26.2753 27.0038 25.3544 26.8301 24.5284 26.4827C23.7025 26.1353 22.9979 25.6502 22.4145 25.0275C21.8311 24.3983 21.3788 23.6477 21.0577 22.776C20.7365 21.9042 20.5759 20.9406 20.5759 19.8853C20.5759 18.7578 20.7365 17.7353 21.0577 16.8176C21.3854 15.8999 21.8475 15.1166 22.444 14.4677C23.0471 13.8188 23.7779 13.3173 24.6366 12.9634C25.4953 12.6094 26.4556 12.4324 27.5174 12.4324C28.5007 12.4324 29.3987 12.6061 30.2115 12.9535C31.0243 13.3009 31.7191 13.7893 32.2959 14.4185C32.8727 15.0413 33.3185 15.7885 33.6331 16.6603C33.9543 17.5321 34.1149 18.4924 34.1149 19.5411C34.1149 20.9308 33.8822 22.15 33.4168 23.1987C32.9514 24.241 32.2959 25.08 31.4503 25.7158L35.5406 28.6655H31.9813L29.4642 26.7089C29.1299 26.8006 28.7825 26.8727 28.422 26.9252C28.0615 26.9776 27.6846 27.0038 27.2913 27.0038ZM27.3995 14.4874C26.7571 14.4874 26.1672 14.6152 25.6297 14.8708C25.0987 15.1199 24.6399 15.4772 24.2531 15.9425C23.8664 16.4014 23.5649 16.952 23.3486 17.5944C23.1388 18.2367 23.0339 18.9512 23.0339 19.7378C23.0339 20.5178 23.1355 21.229 23.3387 21.8714C23.5485 22.5138 23.8402 23.0644 24.2138 23.5232C24.5874 23.9755 25.0364 24.3294 25.5608 24.5851C26.0852 24.8342 26.6653 24.9587 27.3011 24.9587C27.9763 24.9587 28.5826 24.8407 29.1201 24.6048C29.6576 24.3688 30.1132 24.0312 30.4868 23.592C30.867 23.1463 31.1587 22.6023 31.3619 21.9599C31.5651 21.3175 31.6667 20.5866 31.6667 19.7673C31.6667 18.9283 31.5683 18.181 31.3717 17.5255C31.175 16.8701 30.8932 16.3194 30.5261 15.8737C30.159 15.4214 29.71 15.0773 29.1791 14.8413C28.6547 14.6054 28.0615 14.4874 27.3995 14.4874Z" fill="#B2EFD7"/>
+              <path d="M7.02702 26.7678V12.6684H11.0976C16.2956 12.6684 18.8945 14.9593 18.8945 19.5411C18.8945 21.7173 18.1735 23.4675 16.7314 24.7916C15.2894 26.1091 13.3557 26.7678 10.9304 26.7678H7.02702ZM9.35727 14.6545V24.7916H11.2254C12.8707 24.7916 14.1488 24.3393 15.06 23.4347C15.9776 22.5301 16.4365 21.2519 16.4365 19.6001C16.4365 16.303 14.7289 14.6545 11.3139 14.6545H9.35727Z" fill="#B2EFD7"/>
+            </svg>
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-brand-200">DoxiQ</p>
               <p className="text-xs text-slate-300">Template Document Generator</p>
@@ -95,24 +97,21 @@ export default function Home() {
           <div className="max-w-xl space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs text-brand-100">
               <span className="h-2 w-2 rounded-full bg-brand-400" />
-              Премиальный софт • Windows • Безопасно внутри компании
+              Меньше рутины - больше результата
             </div>
             <h1 className="text-4xl font-semibold leading-tight md:text-5xl">
-              Документы без ручной рутины и ошибок. Word и Excel — по правилам.
+              Документы без ручной рутины и ошибок. Word и Excel - по правилам.
             </h1>
-            <p className="text-base text-slate-200 md:text-lg">
+            <p className="text-base text-slate-200 md:text-lg max-w-[480px]">
               Соберите шаблоны Word и Excel в одном приложении, задайте правила заполнения и
-              выпускайте договоры, счета и акты за минуты — без копирования и правок.
+              выпускайте договоры, счета и акты за минуты - без копирования и правок.
             </p>
-            <p className="text-sm text-slate-300">
-              DoxiQ — автоматическое создание документов из шаблонов Word и Excel для команд
+            <p className="text-sm text-slate-300 max-w-[380px]">
+              DoxiQ - автоматическое создание документов из шаблонов Word и Excel для команд
               и бизнеса.
             </p>
             <div className="flex flex-wrap gap-4">
               <DownloadMenu buttonClassName="bg-brand-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-glow transition hover:bg-brand-400" />
-              <button className="rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/70">
-                Посмотреть интерфейс
-              </button>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               {[
@@ -144,12 +143,12 @@ export default function Home() {
                     {[
                       {
                         name: "Счет на оплату",
-                        type: "Excel Spreadsheet",
+                        type: "Excel",
                         accent: "bg-emerald-400/20 text-emerald-200"
                       },
                       {
                         name: "Договор оказания",
-                        type: "Word Document",
+                        type: "Word",
                         accent: "bg-sky-400/20 text-sky-200"
                       }
                     ].map((card) => (
@@ -195,7 +194,7 @@ export default function Home() {
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-[0.2em] text-brand-200">Возможности</p>
             <h2 className="text-3xl font-semibold md:text-4xl">
-              Полный контроль над документами — от шаблона до финального файла
+              Полный контроль над документами - от шаблона до финального файла
             </h2>
             <p className="text-slate-300">
               Описывайте переменные прямо в Word/Excel, а DoxiQ сам соберет корректную
@@ -332,7 +331,7 @@ export default function Home() {
             </div>
             <div className="mt-8 rounded-2xl border border-white/10 bg-brand-500/10 p-5">
               <p className="text-sm text-brand-100">
-                Числовые поля автоматически преобразуют суммы прописью — без ручной проверки
+                Числовые поля автоматически преобразуют суммы прописью - без ручной проверки
                 и человеческого фактора.
               </p>
             </div>
@@ -346,9 +345,9 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs text-brand-100">
                 <span className="h-2 w-2 rounded-full bg-brand-400" />
-                AI features — coming soon
+                AI features - coming soon
               </div>
-              <h2 className="mt-4 text-3xl font-semibold">AI-интеграция — скоро</h2>
+              <h2 className="mt-4 text-3xl font-semibold">AI-интеграция - скоро</h2>
               <p className="mt-3 text-slate-300">
                 Мы работаем над AI-модулем, который ускорит подготовку шаблонов в разы.
               </p>
@@ -391,7 +390,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10 py-8">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 px-6 text-sm text-slate-400 md:flex-row md:items-center">
-          <p>Премиальный софт для Windows • Безопасно • Без передачи данных в облако</p>
+          <p>DoxiQ © 2026</p>
           <div className="flex gap-6">
             <span>zidiks228@gmail.com</span>
           </div>

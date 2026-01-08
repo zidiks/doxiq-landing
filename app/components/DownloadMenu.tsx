@@ -6,8 +6,11 @@ type DownloadMenuProps = {
   buttonClassName: string;
 };
 
-const DOWNLOAD_LINK =
+const DOWNLOAD_LINK_WIN =
   "https://github.com/zidiks/doxiq-releases/releases/download/v0.1.0/DoxiQ_0.1.0_x64-setup.exe";
+
+const DOWNLOAD_LINK_MAC =
+  "https://github.com/zidiks/doxiq-releases/releases/download/v0.1.0/DoxiQ_0.1.0_universal.dmg";
 
 export default function DownloadMenu({ buttonClassName }: DownloadMenuProps) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
@@ -31,7 +34,7 @@ export default function DownloadMenu({ buttonClassName }: DownloadMenuProps) {
   }, []);
 
   return (
-    <details ref={detailsRef} className="relative">
+    <details ref={detailsRef} className="relative select-none">
       <summary
         className={`list-none cursor-pointer rounded-full ${buttonClassName}`}
       >
@@ -40,13 +43,16 @@ export default function DownloadMenu({ buttonClassName }: DownloadMenuProps) {
       <div className="absolute right-0 z-10 mt-3 w-52 rounded-2xl border border-white/10 bg-slate-950/95 p-2 shadow-soft">
         <a
           className="block rounded-xl px-3 py-2 text-sm text-white transition hover:bg-white/10"
-          href={DOWNLOAD_LINK}
+          href={DOWNLOAD_LINK_WIN}
         >
           Windows
         </a>
-        <div className="rounded-xl px-3 py-2 text-sm text-slate-400">
-          MacOS (скоро)
-        </div>
+        <a
+          className="block rounded-xl px-3 py-2 text-sm text-white transition hover:bg-white/10"
+          href={DOWNLOAD_LINK_MAC}
+        >
+          MacOS
+        </a>
       </div>
     </details>
   );
