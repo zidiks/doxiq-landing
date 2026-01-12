@@ -9,3 +9,19 @@
 body {
   @apply bg-white text-slate-900 antialiased;
 }
+
+.blog-content h2 {
+  @apply text-2xl font-semibold text-white;
+}
+
+.blog-content h3 {
+  @apply text-xl font-semibold text-white;
+}
+
+.blog-content ul {
+  @apply list-disc space-y-2 pl-6;
+}
+
+.blog-content a {
+  @apply text-brand-100 underline decoration-brand-100/60 underline-offset-4;
+}

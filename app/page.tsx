@@ -89,6 +89,9 @@ export default function Home() {
             <a className="hover:text-white" href="#workflow">
               Процесс
             </a>
+            <a className="hover:text-white" href="/blog">
+              Блог
+            </a>
           </nav>
           <DownloadMenu buttonClassName="border border-white/20 px-4 py-2 text-sm text-white transition hover:border-white/60" />
         </header>
