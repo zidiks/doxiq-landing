@@ -1,0 +1,11 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" rx="48" fill="#0F172A"/>
+  <rect x="80" y="92" width="1040" height="446" rx="32" fill="#111827"/>
+  <circle cx="190" cy="175" r="44" fill="#22D3EE"/>
+  <rect x="260" y="146" width="640" height="28" rx="14" fill="#38BDF8"/>
+  <rect x="260" y="206" width="520" height="20" rx="10" fill="#94A3B8"/>
+  <rect x="140" y="288" width="920" height="28" rx="14" fill="#1E293B"/>
+  <rect x="140" y="344" width="780" height="20" rx="10" fill="#334155"/>
+  <rect x="140" y="392" width="820" height="20" rx="10" fill="#334155"/>
+  <text x="140" y="495" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="32" font-weight="600">DoxiQ — умные шаблоны</text>
+</svg>

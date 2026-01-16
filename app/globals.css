@@ -9,3 +9,33 @@
 body {
   @apply bg-white text-slate-900 antialiased;
 }
+
+@layer base {
+  .blog-content h2 {
+    @apply mt-8 text-2xl font-semibold text-slate-900;
+  }
+
+  .blog-content h3 {
+    @apply mt-6 text-xl font-semibold text-slate-900;
+  }
+
+  .blog-content p {
+    @apply leading-7;
+  }
+
+  .blog-content ul {
+    @apply ml-6 list-disc space-y-2;
+  }
+
+  .blog-content ol {
+    @apply ml-6 list-decimal space-y-2;
+  }
+
+  .blog-content a {
+    @apply text-brand-500 underline decoration-brand-200 underline-offset-4 hover:text-brand-600;
+  }
+
+  .blog-content code {
+    @apply rounded bg-slate-100 px-2 py-1 text-sm text-slate-800;
+  }
+}
